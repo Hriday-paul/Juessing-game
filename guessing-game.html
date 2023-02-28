@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Guessing game</h1> 
+    <label for="Guess"></label>
+
+    <div style="text-align: center;">
+        <img style="width: 300px;" src="wow-guess-removebg-preview.png" alt="img">
+    </div>
+
+    <div style="text-align: center;">
+        <h3>Guess you number 1 to 5</h3>
+        <label for="xyz"> Guess number : </label>
+        <input style="padding: 5px; width: 50px;" type="text" id="xyz">
+        <button type="button" onclick="myFunction()">Try it</button>
+        <h3 style="text-align: center;" id="demo"></h3>
+    </div>
+    <script>
+        
+        // var win = 0;
+        // var defeat=0;
+        // for (var i=0;i<5;i++){
+        //     var inpt = document.querySelector(".inp")
+        //     var rand = Math.round(Math.random()*5 +1);
+        //     if (inpt==rand){
+        //     console.log("Wow, your guessing number is correct");
+        //     win++;
+        //     }
+            
+        //     else{
+        //         console.log("Sorry, your guessing number is wrong. Correct number is ",rand);
+        //         defeat++;
+        //     }
+        // }
+        // document.write("You have playing game 5 times. </br> You win "+win+" times </br> You defeat "+defeat+" times")
+
+        function myFunction() {
+            var inpt = document.querySelector("input").value;
+            var rand = Math.floor(Math.random()*5 +1);
+            if (inpt==rand){
+                document.getElementById("demo").innerHTML="Wow, your guessing number is correct"
+            }    
+            else{
+                document.getElementById("demo").innerHTML="sorry, your guessing number is incorrect. "+ "Correct number is "+ rand;
+            }
+        }
+    </script>
+</body>
+</html>
